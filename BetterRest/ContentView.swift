@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var wakeUp = Date.now
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        DatePicker("Please enter a date", selection: $wakeUp)
     }
 }
 
